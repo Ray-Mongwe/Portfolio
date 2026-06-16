@@ -12,7 +12,7 @@ export const projects = [
       { name: 'Vite', icon: 'devicon-vitejs-plain colored' },
     ],
     image: '/aslogog.png',
-    liveUrl: 'https://raymongwe.github.io/Afrosurance/',
+    liveUrl: 'https://afrosurance.vercel.app/#/',
     expanded: false
 },
   {
