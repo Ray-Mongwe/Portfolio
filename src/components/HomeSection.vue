@@ -41,9 +41,9 @@ const displayText = ref('');
 const typingComplete = ref(false);
 
 const socialLinks = [
-  { icon: 'fas fa-envelope', url: 'mailto:raykgomotsomongwe@gmail.com' },
-  { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/ray-junior-kgomotso-mongwe' },
-  { icon: 'fab fa-github', url: 'https://github.com/RayKgomotsoMongwe' }
+  { icon: 'fas fa-envelope', url: 'mailto:rayjuniormongwe@gmail.com' },
+  { icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/ray-junior-mongwe-69495742a/' },
+  { icon: 'fab fa-github', url: 'https://github.com/Ray-Mongwe' }
 ];
 
 const typeText = () => {

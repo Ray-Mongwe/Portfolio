@@ -5,22 +5,31 @@
       <p class="row justify-content-center" id="skills-header-text">
         The skills, tools and technologies I use to bring ideas to life.
       </p>
-      <br>
+
+      <!-- Category Filter Buttons -->
+      <div class="filter-container">
+        <button
+          v-for="cat in categories"
+          :key="cat"
+          :class="['filter-btn', { active: selectedCategory === cat }]"
+          @click="selectedCategory = cat"
+        >
+          {{ cat }}
+        </button>
+      </div>
+
       <div class="d-flex flex-wrap justify-content-start gap-4 text-center">
         <div class="tech-icons-wrapper">
           <div
-            v-for="skill in skills"
+            v-for="skill in filteredSkills"
             :key="skill.name"
             class="box-icon"
           >
-            <!-- :class makes the class dynamic — reads from skill.icon -->
             <i :class="`devicon ${skill.icon}`"></i>
             <p class="icon-link">
-              <!-- :href reads from skill.url -->
               <a :href="skill.url" target="_blank">{{ skill.name }}</a>
             </p>
           </div>
-
         </div>
       </div>
     </div>
@@ -28,7 +37,19 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
 import { skills } from '../data/skills.js'
+
+// Dynamically extract unique categories without adding 'All'
+const categories = [...new Set(skills.map(s => s.category))]
+
+// Default to the first category in the array ('Languages')
+const selectedCategory = ref(categories[0] || '')
+
+// Filter skills by the currently selected category
+const filteredSkills = computed(() => {
+  return skills.filter(s => s.category === selectedCategory.value)
+})
 </script>
 
 <style scoped>
@@ -37,6 +58,33 @@ import { skills } from '../data/skills.js'
   max-width: 75rem;
   margin: 0 auto;
   padding: 5rem 1.25rem;
+}
+
+/* Tab Filter Buttons */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0 3rem;
+}
+
+.filter-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(13, 202, 240, 0.4);
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #0dcaf0;
+  color: #000;
+  box-shadow: 0 0 1rem rgba(13, 202, 240, 0.6);
 }
 
 .tech-icons-wrapper {

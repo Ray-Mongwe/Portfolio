@@ -1,6 +1,6 @@
 <template>
-  <section id="about">
-    <div class="about-wrapper">
+  <section id="about" ref="aboutSection">
+    <div :class="['about-wrapper', { 'is-visible': isVisible }]">
       <img class="about-image" src="/undraw_programming_65t2.svg" alt="avatar" />
       <div class="about-content">
         <h1 class="headings">About me</h1>
@@ -22,7 +22,33 @@
 </template>
 
 <script setup>
-// no data or logic needed here — purely static content
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const aboutSection = ref(null)
+const isVisible = ref(false)
+
+let observer = null
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        isVisible.value = true
+        // Stop observing once it has animated into view
+        observer.unobserve(entry.target)
+      }
+    },
+    { threshold: 0.4 } // Triggers when 20% of the section is visible
+  )
+
+  if (aboutSection.value) {
+    observer.observe(aboutSection.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer) observer.disconnect()
+})
 </script>
 
 <style scoped>
@@ -34,21 +60,39 @@
   color: #ffffff;
 }
 
-.btn-info {
-  transition: background-color 0.8s, transform 0.3s ease, color 0.8s;
-  border: gray;
-}
-
-.btn-info:hover {
-  background: gray;
-  color: #fff;
-  transform: scale(1.1) translateY(-0.3125rem);
-}
-
+/* --- Scroll Entrance Animation --- */
 .about-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 2.5rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+.about-wrapper.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.btn-info {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(13, 202, 240, 0.4);
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-info:hover {
+  background: #0dcaf0;
+  color: #000;
+  box-shadow: 0 0 1rem rgba(13, 202, 240, 0.6);
+  transform: translateY(-0.1875rem);
 }
 
 .about-image {

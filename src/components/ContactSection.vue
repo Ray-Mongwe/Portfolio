@@ -7,14 +7,14 @@
     <div class="contact-container">
       <div class="contact-info">
         <p><i class="icon fa-solid fa-envelope"></i>
-          <a href="mailto:raykgomotsomongwe@gmail.com" target="_blank">raykgomotsomongwe</a>
+          <a href="mailto:rayjuniormongwe@gmail.com" target="_blank">Email</a>
         </p>
         <p><i class="icon fa-solid fa-phone"></i> +27 63 654 1663</p>
         <p><i class="icon fab fa-github"></i>
-          <a href="https://github.com/RayKgomotsoMongwe" target="_blank">github</a>
+          <a href="https://github.com/Ray-Mongwe" target="_blank">github</a>
         </p>
         <p><i class="icon fab fa-linkedin"></i>
-          <a href="https://linkedin.com/in/ray-junior-kgomotso-mongwe" target="_blank">linkedin</a>
+          <a href="https://www.linkedin.com/in/ray-junior-mongwe-69495742a/" target="_blank">linkedin</a>
         </p>
       </div>
 
@@ -44,7 +44,7 @@ const formData = ref({
 const handleSubmit = () => {
   const form = document.createElement('form')
   form.method = 'POST'
-  form.action = 'https://formsubmit.co/raykgomotsomongwe@gmail.com'
+  form.action = 'https://formsubmit.co/rayjuniormongwe@gmail.com'
 
   const fields = {
     name: formData.value.name,
