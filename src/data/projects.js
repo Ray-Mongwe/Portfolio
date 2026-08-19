@@ -23,7 +23,7 @@ export const projects = [
     tech: [
       { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
       { name: 'React', icon: 'devicon-react-original colored' },
-      { name: 'Next', icon: 'devicon-nextjs-plain colored' },
+      { name: 'Next', icon: 'devicon-nextjs-plain' },
       { name: 'Node', icon: 'devicon-nodejs-plain colored' },
       { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
       { name: 'Tailwind', icon: 'devicon-tailwindcss-plain colored' },
@@ -38,13 +38,14 @@ export const projects = [
     details: 'Yarona Motion Pictures is a portfolio and booking site for a film production company. Currently a frontend-focused build showcasing their work and services. The stack is intentionally lean since the site is mostly static content — but built with scalability in mind. Node, Express and MongoDB are included to support future features like a dynamic gallery CMS, event listings, and a booking system as the client grows.',
     tech: [
       { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
-      { name: 'Angular', icon: 'devicon-angular-plain colored' },
-      { name: 'Analog', icon: 'devicon-angularjs-plain colored' },
+      { name: 'Vue', icon: 'devicon-vuejs-plain colored' },
+      { name: 'Vite', icon: 'devicon-vitejs-plain colored' },
       { name: 'Tailwind', icon: 'devicon-tailwindcss-plain colored' },
-      { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
-      { name: 'Node', icon: 'devicon-nodejs-plain colored' }
+      { name: 'Node', icon: 'devicon-nodejs-plain colored' },
+      { name: 'Express', icon: 'devicon-express-original colored' },
+      { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' }
     ],
-    image: '/maiconfz-image-1271454_1920.png',
+    image: '/Untitled - August 19, 2026 at 18.07.46.png',
     liveUrl: '#',
     expanded: false
   }

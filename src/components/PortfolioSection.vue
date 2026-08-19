@@ -87,7 +87,7 @@ const projects = reactive(projectData.map(p => ({ ...p, expanded: false })))
 
 .project-image {
   flex: 1.2;
-  max-width: 43.75rem;
+  max-width: 35.75rem;
   border-radius: 1.25rem;
   box-shadow: 0 0.625rem 9rem rgba(13, 202, 240, 0.4);
 }

@@ -207,8 +207,21 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
-  .home { margin: 2rem; }
-  #home-p { font-size: 3rem; min-height: 8rem; }
-  .social-icons a { font-size: 2rem; }
+  #home {
+    min-height: auto; /* Allow the section to wrap content naturally */
+  }
+
+  .home { 
+    margin: 0 1.5rem; /* Slightly tighter margins for mobile screens */
+  }
+
+  .social-icons a { 
+    font-size: 2rem; 
+  }
+  
+  .home-p2 {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+  }
 }
 </style>
