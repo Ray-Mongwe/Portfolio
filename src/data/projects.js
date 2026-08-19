@@ -45,7 +45,7 @@ export const projects = [
       { name: 'Express', icon: 'devicon-express-original colored' },
       { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' }
     ],
-    image: '/Untitled - August 19, 2026 at 18.07.46.png',
+    image: '/coming-soon.jpg',
     liveUrl: '#',
     expanded: false
   }
