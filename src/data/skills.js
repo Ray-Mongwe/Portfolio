@@ -1,6 +1,5 @@
 export const skills = [
   // Languages
-  // Progressive path: Web foundational markup/style -> Web scripting -> Strongly typed web -> System & general programming
   { name: 'HTML', icon: 'devicon-html5-plain colored', url: 'https://en.wikipedia.org/wiki/HTML', category: 'Languages' },
   { name: 'CSS', icon: 'devicon-css3-plain colored', url: 'https://en.wikipedia.org/wiki/CSS', category: 'Languages' },
   { name: 'JavaScript', icon: 'devicon-javascript-plain colored', url: 'https://en.wikipedia.org/wiki/JavaScript', category: 'Languages' },
@@ -15,7 +14,6 @@ export const skills = [
   { name: 'Swift', icon: 'devicon-swift-plain colored', url: 'https://en.wikipedia.org/wiki/Swift_(programming_language)', category: 'Languages' },
 
   // Frameworks & Libraries
-  // Progressive path: CSS extensions -> Node runtime/packages -> Frontend libraries/frameworks -> Meta-frameworks -> Python/ML -> Game engines
   { name: 'Sass', icon: 'devicon-sass-original colored', url: 'https://en.wikipedia.org/wiki/Sass_(style_sheet_language)', category: 'Frameworks & Libraries' },
   { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored', url: 'https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)', category: 'Frameworks & Libraries' },
   { name: 'Tailwind', icon: 'devicon-tailwindcss-plain colored', url: 'https://en.wikipedia.org/wiki/Tailwind_CSS', category: 'Frameworks & Libraries' },
@@ -39,37 +37,31 @@ export const skills = [
   { name: 'D3', icon: 'devicon-d3js-plain colored', url: 'https://en.wikipedia.org/wiki/D3.js', category: 'Frameworks & Libraries' },
   { name: 'Apollo', icon: 'devicon-apollographql-plain colored', url: 'https://en.wikipedia.org/wiki/Apollo_GraphQL', category: 'Frameworks & Libraries' },
   { name: 'Unity', icon: 'devicon-unity-plain colored', url: 'https://en.wikipedia.org/wiki/Unity_(game_engine)', category: 'Frameworks & Libraries' },
+  { name: 'Vite', icon: 'devicon-vitejs-plain colored', url: 'https://en.wikipedia.org/wiki/Vite_(software)', category: 'Frameworks & Libraries' },
 
   // Databases & APIs
-  // Progressive path: Lightweight SQL -> Production SQL -> NoSQL -> Modern API layers
   { name: 'SQLite', icon: 'devicon-sqlite-plain colored', url: 'https://en.wikipedia.org/wiki/SQLite', category: 'Databases & APIs' },
   { name: 'MySQL', icon: 'devicon-mysql-plain colored', url: 'https://en.wikipedia.org/wiki/MySQL', category: 'Databases & APIs' },
   { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored', url: 'https://en.wikipedia.org/wiki/PostgreSQL', category: 'Databases & APIs' },
   { name: 'MongoDB', icon: 'devicon-mongodb-plain colored', url: 'https://en.wikipedia.org/wiki/MongoDB', category: 'Databases & APIs' },
   { name: 'GraphQL', icon: 'devicon-graphql-plain colored', url: 'https://en.wikipedia.org/wiki/GraphQL', category: 'Databases & APIs' },
 
-  // Cloud, Testing & Security
-  // Progressive path: Unit testing -> E2E testing -> Hosting platform -> Containerization -> Orchestration -> Cloud providers -> Security
-  { name: 'Jest', icon: 'devicon-jest-plain colored', url: 'https://en.wikipedia.org/wiki/Jest_(JavaScript_testing_framework)', category: 'Cloud, Testing & Security' },
-  { name: 'Puppeteer', icon: 'devicon-puppeteer-plain colored', url: 'https://en.wikipedia.org/wiki/Puppeteer_(software)', category: 'Cloud, Testing & Security' },
-  { name: 'Playwright', icon: 'devicon-playwright-plain colored', url: 'https://en.wikipedia.org/wiki/Playwright_(software)', category: 'Cloud, Testing & Security' },
-  { name: 'Vercel', icon: 'devicon-vercel-original', url: 'https://en.wikipedia.org/wiki/Vercel', category: 'Cloud, Testing & Security' },
-  { name: 'Docker', icon: 'devicon-docker-plain colored', url: 'https://en.wikipedia.org/wiki/Docker_(software)', category: 'Cloud, Testing & Security' },
-  { name: 'Kubernetes', icon: 'devicon-kubernetes-plain colored', url: 'https://en.wikipedia.org/wiki/Kubernetes', category: 'Cloud, Testing & Security' },
-  { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark colored', url: 'https://en.wikipedia.org/wiki/Amazon_Web_Services', category: 'Cloud, Testing & Security' },
-  { name: 'Azure', icon: 'devicon-azure-plain colored', url: 'https://en.wikipedia.org/wiki/Microsoft_Azure', category: 'Cloud, Testing & Security' },
-  { name: 'Burp Suite', icon: 'fa-solid fa-bug colored', url: 'https://en.wikipedia.org/wiki/Burp_Suite', category: 'Cloud, Testing & Security' },
+  // Security & Testing
+  { name: 'Jest', icon: 'devicon-jest-plain colored', url: 'https://en.wikipedia.org/wiki/Jest_(JavaScript_testing_framework)', category: 'Security & Testing' },
+  { name: 'Puppeteer', icon: 'devicon-puppeteer-plain colored', url: 'https://en.wikipedia.org/wiki/Puppeteer_(software)', category: 'Security & Testing' },
+  { name: 'Playwright', icon: 'devicon-playwright-plain colored', url: 'https://en.wikipedia.org/wiki/Playwright_(software)', category: 'Security & Testing' },
+  { name: 'Cypress', icon: 'devicon-cypressio-plain colored', url: 'https://en.wikipedia.org/wiki/Cypress.io', category: 'Security & Testing' },
+  { name: 'Burp Suite', icon: 'fa-solid fa-bug colored', url: 'https://en.wikipedia.org/wiki/Burp_Suite', category: 'Security & Testing' },
 
-  // Tools & Design
-  // Progressive path: Shell -> Version control -> IDEs -> Build tools -> Design software -> Advanced OS
-  { name: 'Bash', icon: 'devicon-bash-plain', url: 'https://en.wikipedia.org/wiki/Bash_(Unix_shell)', category: 'Tools & Design' },
-  { name: 'Git', icon: 'devicon-git-plain colored', url: 'https://en.wikipedia.org/wiki/Git', category: 'Tools & Design' },
-  { name: 'GitHub', icon: 'devicon-github-original', url: 'https://en.wikipedia.org/wiki/GitHub', category: 'Tools & Design' },
-  { name: 'GitLab', icon: 'devicon-gitlab-plain colored', url: 'https://en.wikipedia.org/wiki/GitLab', category: 'Tools & Design' },
-  { name: 'VS Code', icon: 'devicon-vscode-plain colored', url: 'https://en.wikipedia.org/wiki/Visual_Studio_Code', category: 'Tools & Design' },
-  { name: 'Visual Studio', icon: 'devicon-visualstudio-plain colored', url: 'https://en.wikipedia.org/wiki/Microsoft_Visual_Studio', category: 'Tools & Design' },
-  { name: 'Vite', icon: 'devicon-vitejs-plain colored', url: 'https://en.wikipedia.org/wiki/Vite_(software)', category: 'Tools & Design' },
-  { name: 'Canva', icon: 'devicon-canva-original colored', url: 'https://en.wikipedia.org/wiki/Canva', category: 'Tools & Design' },
-  { name: 'Figma', icon: 'devicon-figma-plain colored', url: 'https://en.wikipedia.org/wiki/Figma_(software)', category: 'Tools & Design' },
-  { name: 'Arch Linux', icon: 'devicon-archlinux-plain colored', url: 'https://en.wikipedia.org/wiki/Arch_Linux', category: 'Tools & Design' }
+  // Cloud & Tools
+  { name: 'Vercel', icon: 'devicon-vercel-original', url: 'https://en.wikipedia.org/wiki/Vercel', category: 'Cloud & Tools' },
+  { name: 'Docker', icon: 'devicon-docker-plain colored', url: 'https://en.wikipedia.org/wiki/Docker_(software)', category: 'Cloud & Tools' },
+  { name: 'Kubernetes', icon: 'devicon-kubernetes-plain colored', url: 'https://en.wikipedia.org/wiki/Kubernetes', category: 'Cloud & Tools' },
+  { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark colored', url: 'https://en.wikipedia.org/wiki/Amazon_Web_Services', category: 'Cloud & Tools' },
+  { name: 'Azure', icon: 'devicon-azure-plain colored', url: 'https://en.wikipedia.org/wiki/Microsoft_Azure', category: 'Cloud & Tools' },
+  { name: 'Bash', icon: 'devicon-bash-plain', url: 'https://en.wikipedia.org/wiki/Bash_(Unix_shell)', category: 'Cloud & Tools' },
+  { name: 'Git', icon: 'devicon-git-plain colored', url: 'https://en.wikipedia.org/wiki/Git', category: 'Cloud & Tools' },
+  { name: 'Arch Linux', icon: 'devicon-archlinux-plain colored', url: 'https://en.wikipedia.org/wiki/Arch_Linux', category: 'Cloud & Tools' },
+  { name: 'Canva', icon: 'devicon-canva-original colored', url: 'https://en.wikipedia.org/wiki/Canva', category: 'Cloud & Tools' },
+  { name: 'Figma', icon: 'devicon-figma-plain colored', url: 'https://en.wikipedia.org/wiki/Figma_(software)', category: 'Cloud & Tools' }
 ];
