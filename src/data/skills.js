@@ -32,6 +32,7 @@ export const skills = [
   { name: 'jQuery', icon: 'devicon-jquery-plain colored', url: 'https://api.jquery.com', category: 'Libraries' },
   { name: 'Vuetify', icon: 'devicon-vuetify-plain colored', url: 'https://vuetifyjs.com/en/getting-started/installation/', category: 'Libraries' },
   { name: 'Apollo', icon: 'devicon-apollographql-plain colored', url: 'https://www.apollographql.com/docs', category: 'Libraries' },
+  { name: 'Axios', icon: 'devicon-axios-plain colored', url: 'https://axios.rest/pages/getting-started/first-steps', category: 'Libraries' },
   //{ name: 'NumPy', icon: 'devicon-numpy-plain colored', url: 'https://numpy.org/doc/', category: 'Libraries' },
   //{ name: 'pandas', icon: 'devicon-pandas-plain colored', url: 'https://pandas.pydata.org/docs/', category: 'Libraries' },
   //{ name: 'TensorFlow', icon: 'devicon-tensorflow-original colored', url: 'https://www.tensorflow.org/api_docs', category: 'Libraries' },

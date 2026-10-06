@@ -27,10 +27,22 @@ html {
   font-size: clamp(14px, 1.1vw, 18px);
 }
 
+/* 1. Add it here to disable selection across the whole page */
 body {
   color: #ffffff;
   background: #110f0f;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE 10 and 11 */
+  user-select: none;         /* Standard syntax */
 }
+
+/* 2. Add this right below it so form fields still work perfectly */
+input, textarea {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 .headings {
   font-family: "Fredoka", sans-serif;
   font-weight: 500;
