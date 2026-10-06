@@ -23,7 +23,7 @@
           <div
             v-for="skill in filteredSkills"
             :key="skill.name"
-            :ref="setCardColor"
+            @mouseenter="setHoverColor"
             class="box-icon"
           >
             <i v-if="skill.icon" :class="`devicon ${skill.icon}`"></i>
@@ -58,13 +58,13 @@ const filteredSkills = computed(() => {
   return skills.filter(s => s.category === selectedCategory.value)
 })
 
-// As each card appears, read its icon's rendered color and hand it to CSS
-// as --icon-color (the color the border and glow switch to on hover).
-// Image icons (no <i>) fall back to white.
-function setCardColor(card) {
-  if (!card) return
+// Read the icon's rendered color at the moment of hover (not at mount, when
+// the icon font CSS may not have been applied yet) and hand it to CSS as
+// --icon-color for the hover border and glow. Image icons fall back to white.
+function setHoverColor(event) {
+  const card = event.currentTarget
   const icon = card.querySelector('i')
-  const color = icon ? getComputedStyle(icon).color : '#ffffff'
+  const color = (icon && getComputedStyle(icon).color) || '#ffffff'
   card.style.setProperty('--icon-color', color)
 }
 </script>
