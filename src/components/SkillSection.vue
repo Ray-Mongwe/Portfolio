@@ -23,9 +23,16 @@
           <div
             v-for="skill in filteredSkills"
             :key="skill.name"
+            :ref="setCardColor"
             class="box-icon"
           >
-            <i :class="`devicon ${skill.icon}`"></i>
+            <i v-if="skill.icon" :class="`devicon ${skill.icon}`"></i>
+            <img
+              v-else
+              :src="skill.iconUrl"
+              :alt="skill.name"
+              class="tech-icon-img"
+            />
             <p class="icon-link">
               <a :href="skill.url" target="_blank">{{ skill.name }}</a>
             </p>
@@ -50,6 +57,16 @@ const selectedCategory = ref(categories[0] || '')
 const filteredSkills = computed(() => {
   return skills.filter(s => s.category === selectedCategory.value)
 })
+
+// As each card appears, read its icon's rendered color and hand it to CSS
+// as --icon-color (the color the border and glow switch to on hover).
+// Image icons (no <i>) fall back to white.
+function setCardColor(card) {
+  if (!card) return
+  const icon = card.querySelector('i')
+  const color = icon ? getComputedStyle(icon).color : '#ffffff'
+  card.style.setProperty('--icon-color', color)
+}
 </script>
 
 <style scoped>
@@ -98,11 +115,15 @@ const filteredSkills = computed(() => {
 }
 
 .box-icon {
+  box-sizing: border-box;
   width: 8.75rem;
   height: 10rem;
   border-radius: 1.25rem;
-  box-shadow: 0 0.625rem 1.5625rem rgba(13,202,240,0.4);
-  transition: transform 0.3s ease;
+  /* Base state: blue glow, no visible border (transparent so hover doesn't shift layout) */
+  --base-color: #0dcaf0;
+  border: 2px solid transparent;
+  box-shadow: 0 0.625rem 1.5625rem color-mix(in srgb, var(--base-color) 40%, transparent);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -114,6 +135,9 @@ const filteredSkills = computed(() => {
 
 .box-icon:hover {
   transform: scale(1.2);
+  /* On hover, border and glow switch to the icon's own color */
+  border-color: var(--icon-color, #0dcaf0);
+  box-shadow: 0 0.625rem 1.5625rem color-mix(in srgb, var(--icon-color, #0dcaf0) 40%, transparent);
 }
 
 .box-icon i {
@@ -123,6 +147,12 @@ const filteredSkills = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.box-icon .tech-icon-img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
 }
 
 .box-icon p {
