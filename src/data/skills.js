@@ -29,6 +29,7 @@ export const skills = [
   // Libraries
   { name: 'React', icon: 'devicon-react-original colored', url: 'https://react.dev', category: 'Libraries' },
   { name: 'Redux', icon: 'devicon-redux-original colored', url: 'https://redux.js.org', category: 'Libraries' },
+  { name: 'Mongoose', icon: 'devicon-mongoose-original colored', url: 'https://mongoosejs.com', category: 'Libraries' },
   { name: 'jQuery', icon: 'devicon-jquery-plain colored', url: 'https://api.jquery.com', category: 'Libraries' },
   { name: 'Vuetify', icon: 'devicon-vuetify-plain colored', url: 'https://vuetifyjs.com/en/getting-started/installation/', category: 'Libraries' },
   { name: 'Apollo', icon: 'devicon-apollographql-plain colored', url: 'https://www.apollographql.com/docs', category: 'Libraries' },
