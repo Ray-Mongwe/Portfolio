@@ -19,6 +19,7 @@ export const skills = [
   { name: 'Express', icon: 'devicon-express-original colored', url: 'https://expressjs.com', category: 'Frameworks' },
   { name: 'Next', icon: 'devicon-nextjs-plain', url: 'https://nextjs.org/docs', category: 'Frameworks' },
   { name: 'Vue', icon: 'devicon-vuejs-plain colored', url: 'https://vuejs.org/guide/introduction.html', category: 'Frameworks' },
+  { name: 'Blazor', icon: 'devicon-blazor-original colored', url: 'https://learn.microsoft.com/en-us/aspnet/core/blazor/', category: 'Frameworks' },
   { name: 'Nuxt', icon: 'devicon-nuxtjs-plain colored', url: 'https://nuxt.com/docs', category: 'Frameworks' },
   { name: 'Angular', icon: 'devicon-angularjs-plain colored', url: 'https://angular.dev', category: 'Frameworks' },
   { name: 'ASP.NET', icon: 'devicon-dotnetcore-plain colored', url: 'https://learn.microsoft.com/en-us/aspnet/core/', category: 'Frameworks' },

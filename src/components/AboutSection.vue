@@ -15,7 +15,7 @@
           For me, software development isn't just a career path — it's a lifelong passion.
         </p>
         <br />
-        <a href="/Ray-Junior-Mongwe-CV.pdf" download="/Ray-Junior-Mongwe-CV.pdf" class="btn btn-info" role="button">
+        <a href="/ray's-CV.pdf" download="/ray's-CV.pdf" class="btn btn-info" role="button">
           Download CV
         </a>
       </div>

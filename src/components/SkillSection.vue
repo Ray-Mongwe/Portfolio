@@ -20,9 +20,14 @@
 
       <div class="d-flex flex-wrap justify-content-start gap-4 text-center">
         <div class="tech-icons-wrapper">
-          <div
+          <!-- The whole card is the link -->
+          <a
             v-for="skill in filteredSkills"
             :key="skill.name"
+            :href="skill.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            :aria-label="`${skill.name} documentation`"
             @mouseenter="setHoverColor"
             class="box-icon"
           >
@@ -33,10 +38,8 @@
               :alt="skill.name"
               class="tech-icon-img"
             />
-            <p class="icon-link">
-              <a :href="skill.url" target="_blank">{{ skill.name }}</a>
-            </p>
-          </div>
+            <p class="icon-link">{{ skill.name }}</p>
+          </a>
         </div>
       </div>
     </div>
@@ -131,10 +134,17 @@ function setHoverColor(event) {
   justify-content: center;
   padding: 1rem 0.5rem;
   gap: 0.5rem;
+  /* Card is now an <a>: reset link styling and show it's clickable */
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
 }
 
-.box-icon:hover {
+.box-icon:hover,
+.box-icon:focus-visible {
   transform: scale(1.2);
+  color: #fff;
+  text-decoration: none;
   /* On hover, border and glow switch to the icon's own color */
   border-color: var(--icon-color, #0dcaf0);
   box-shadow: 0 0.625rem 1.5625rem color-mix(in srgb, var(--icon-color, #0dcaf0) 40%, transparent);
@@ -160,10 +170,5 @@ function setHoverColor(event) {
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-}
-
-.icon-link a {
-  text-decoration: none;
-  color: #fff;
 }
 </style>
